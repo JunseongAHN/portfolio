@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import Card from './components/Card';
+ 
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Junseong Ahn</h1>
+ 
+      <p>Physical AI / Autonomous Systems / Perception Engineer</p>
+ 
+      <hr />
+ 
+      <h2>Projects</h2>
+ 
+      <Card
+        title="Maritime Autonomous Navigation"
+        description="End-to-end perception and path-planning for surface vessels in open-water and port environments using lidar, radar, and camera fusion."
+        thumbnail="/Thumbnail/MaritimeAutonomousNavigation.png"
+        href="/MaritimeAutonomousNavigation"
+      />
+ 
+      <hr />
+ 
+      <p>GitHub / LinkedIn / Resume</p>
     </div>
   );
 }
-
-export default App;
+ 
