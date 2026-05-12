@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import HighlightBox from "../../components/HighlightBox";
 import comparison from "./images/comparison.png";
 import demoVideo from "./videos/demo.mp4";
@@ -5,14 +6,14 @@ import demoVideo from "./videos/demo.mp4";
 export default function View() {
   return (
     <main style={pageStyle}>
-      <a href="/">← Back</a>
+      <Link to="/">← Back</Link>
 
       <section style={heroStyle}>
         <p style={eyebrowStyle}>
           Browser AI · Mobile Inference · ONNX Runtime Web · WebGPU/WASM
         </p>
 
-        <h1 style={titleStyle}>AI Deployment Optimization</h1>
+        <h1 style={titleStyle}>Browser-Based AI Runtime Optimization</h1>
 
         <p style={subtitleStyle}>
           A browser-side inference project exploring how runtime backend choices
@@ -46,9 +47,80 @@ export default function View() {
         <h2>Runtime Comparison</h2>
 
         <p style={bodyStyle}>
-          Benchmarked WebGPU and WebAssembly for neural network inference using
-          ONNX Runtime Web, and compared WebAssembly with JavaScript for
-          CPU-bound browser workloads.
+          Benchmarked ONNX Runtime Web inference across WebAssembly and WebGPU
+          backends on desktop and tablet environments. WebGPU showed
+          approximately 6× higher throughput on desktop and 1.67× higher
+          throughput on tablet, while results varied by hardware, browser
+          support, and thermal constraints.
+        </p>
+
+        <div style={tableWrapStyle}>
+          <h3>Desktop</h3>
+          <p style={noteStyle}>Intel Pentium Gold G5400 + NVIDIA GTX 750 Ti</p>
+
+          <table style={tableStyle}>
+            <thead>
+              <tr>
+                <th style={thStyle}>Backend</th>
+                <th style={thStyle}>FPS</th>
+                <th style={thStyle}>Avg Latency</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style={tdStyle}>WASM</td>
+                <td style={tdStyle}>~16</td>
+                <td style={tdStyle}>~63 ms</td>
+              </tr>
+              <tr>
+                <td style={tdStyle}>WebGPU</td>
+                <td style={tdStyle}>~99</td>
+                <td style={tdStyle}>~10 ms</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p style={resultStyle}>
+            Result: WebGPU achieved approximately 6× higher throughput than
+            WASM.
+          </p>
+        </div>
+
+        <div style={tableWrapStyle}>
+          <h3>Tablet</h3>
+          <p style={noteStyle}>Lenovo Tab M11</p>
+
+          <table style={tableStyle}>
+            <thead>
+              <tr>
+                <th style={thStyle}>Backend</th>
+                <th style={thStyle}>FPS</th>
+                <th style={thStyle}>Avg Latency</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style={tdStyle}>WASM</td>
+                <td style={tdStyle}>~7</td>
+                <td style={tdStyle}>~133 ms</td>
+              </tr>
+              <tr>
+                <td style={tdStyle}>WebGPU</td>
+                <td style={tdStyle}>~12</td>
+                <td style={tdStyle}>~80 ms</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p style={resultStyle}>
+            Result: WebGPU achieved approximately 1.67× higher throughput than
+            WASM.
+          </p>
+        </div>
+
+        <p style={noteStyle}>
+          Performance depends on browser, hardware, thermal limits, and WebGPU
+          support.
         </p>
 
         <img
@@ -68,7 +140,8 @@ export default function View() {
           <li>Compared WASM and WebGPU backends for real-time inference</li>
           <li>Tested deployment behavior across desktop and mobile browsers</li>
           <li>
-            Benchmarked JavaScript and WebAssembly for CPU-bound workloads
+            Measured FPS and latency differences under practical browser
+            constraints
           </li>
         </ul>
       </HighlightBox>
@@ -151,7 +224,7 @@ const sectionStyle: React.CSSProperties = {
 const bodyStyle: React.CSSProperties = {
   fontSize: 17,
   lineHeight: 1.7,
-  color: "#444",
+  color: "#070606",
   maxWidth: 820,
 };
 
@@ -167,4 +240,42 @@ const listStyle: React.CSSProperties = {
   lineHeight: 1.8,
   paddingLeft: 20,
   maxWidth: 860,
+};
+
+const tableWrapStyle: React.CSSProperties = {
+  marginTop: 28,
+  maxWidth: 760,
+};
+
+const tableStyle: React.CSSProperties = {
+  width: "100%",
+  borderCollapse: "collapse",
+  marginTop: 10,
+  fontSize: 16,
+};
+
+const thStyle: React.CSSProperties = {
+  textAlign: "left",
+  borderBottom: "1px solid #ddd",
+  padding: "10px 8px",
+};
+
+const tdStyle: React.CSSProperties = {
+  borderBottom: "1px solid #eee",
+  padding: "10px 8px",
+};
+
+const noteStyle: React.CSSProperties = {
+  fontSize: 15,
+  lineHeight: 1.6,
+  color: "#666",
+  maxWidth: 820,
+};
+
+const resultStyle: React.CSSProperties = {
+  fontSize: 16,
+  lineHeight: 1.6,
+  color: "#333",
+  fontWeight: 600,
+  marginTop: 12,
 };

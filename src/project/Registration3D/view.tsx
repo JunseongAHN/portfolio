@@ -1,4 +1,5 @@
 import demoVideo from "./videos/demo.mp4";
+import { Link } from "react-router-dom";
 
 import symmetricPlane from "./images/symmetricPlane.png";
 import result from "./images/result.jpg";
@@ -7,7 +8,7 @@ import HighlightBox from "../../components/HighlightBox";
 export default function View() {
   return (
     <main style={pageStyle}>
-      <a href="/">← Back</a>
+      <Link to="/">← Back</Link>
 
       <section style={heroStyle}>
         <p style={eyebrowStyle}>Imagoworks · 3D Vision · Registered Patent</p>

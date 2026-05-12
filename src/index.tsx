@@ -8,14 +8,14 @@ import {
   MaritimeAutonomousNavigation,
   Registration3D,
 } from "./project";
-import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
 );
+
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/portfolio">
       <Routes>
         <Route path="/" element={<App />} />
         <Route
@@ -31,5 +31,3 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>,
 );
-
-reportWebVitals();

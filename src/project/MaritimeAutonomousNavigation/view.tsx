@@ -4,11 +4,12 @@ import navigation from "./images/navigation.png";
 
 import demoVideo from "./videos/demo.mp4";
 import HighlightBox from "../../components/HighlightBox";
+import { Link } from "react-router-dom";
 
 export default function View() {
   return (
     <main style={pageStyle}>
-      <a href="/">← Back</a>
+      <Link to="/">← Back</Link>
 
       <section style={heroStyle}>
         <p style={eyebrowStyle}>Navier Boat · Autonomous Systems</p>
