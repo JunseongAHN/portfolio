@@ -49,7 +49,7 @@ export default function App() {
               color: "#222",
             }}
           >
-            Physical AI · Multimodal Perception · Deployable Systems
+            Real-Time Perception · 3D Vision · Deployable AI Systems
           </p>
 
           <p
@@ -61,9 +61,8 @@ export default function App() {
               margin: "0 0 18px",
             }}
           >
-            Building real-world intelligent systems — from autonomous perception
-            and geometry-aware 3D systems to deployable AI runtimes for
-            production environments.
+            Applied AI engineer focused on autonomous perception, 3D vision, and
+            deployable model runtimes.
           </p>
 
           <p
@@ -73,14 +72,26 @@ export default function App() {
               margin: "0 0 18px",
             }}
           >
-            M.S. Computer Science · 3+ years in production AI · 10+ patents · 2
-            publications
+            M.S. Computer Science · 3+ years in production AI · 2 publications ·
+            patent contributions in 3D/medical AI
           </p>
 
           <p style={{ margin: 0, fontSize: 16 }}>
-            <a href="https://github.com/JunseongAHN">GitHub</a>
+            <a
+              href="https://github.com/JunseongAHN"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
             {" · "}
-            <a href="https://www.linkedin.com/in/junseong-ahn">LinkedIn</a>
+            <a
+              href="https://www.linkedin.com/in/junseong-ahn"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
             {" · "}
             <a href={`${publicUrl}/docs/resume.pdf`}>Resume</a>
             {" · "}
@@ -108,25 +119,99 @@ export default function App() {
         >
           <Card
             title="Real-Time Maritime Autonomous Navigation"
-            description="Real-time multimodal perception and autonomous scene understanding for dynamic maritime environments using radar, AIS, GPS, and vision."
+            description="Multimodal perception and autonomous scene understanding for maritime environments using radar, AIS, GPS, and vision."
             thumbnail={`${publicUrl}/Thumbnail/MaritimeAutonomousNavigation.png`}
-            href={`${publicUrl}/MaritimeAutonomousNavigation`}
+            href="/MaritimeAutonomousNavigation"
           />
 
           <Card
             title="Automated 3D Facial Scan Alignment"
-            description="Geometry-based registration initialization system for CT–facial scan alignment using mesh processing, symmetry estimation, and 3D optimization."
+            description="Geometry-aware CT–facial scan registration using mesh processing, symmetry estimation, and 3D optimization."
             thumbnail={`${publicUrl}/Thumbnail/Registration3D.png`}
-            href={`${publicUrl}/Registration3D`}
+            href="/Registration3D"
           />
 
           <Card
-            title="AI Deployment Optimization"
-            description="Browser-side AI inference optimization comparing WebAssembly and WebGPU backends for real-time, deployable model execution."
+            title="Browser-Based AI Runtime Optimization"
+            description="Browser-side AI inference optimization comparing WebAssembly and WebGPU backends for real-time model execution."
             thumbnail={`${publicUrl}/Thumbnail/AIDeploymentOptimization.png`}
-            href={`${publicUrl}/AIDeploymentOptimization`}
+            href="/AIDeploymentOptimization"
           />
         </div>
+      </section>
+
+      <section style={{ marginTop: 72 }}>
+        <h2>Publications & Patent Contributions</h2>
+
+        <p style={{ color: "#555", lineHeight: 1.7, marginTop: 16 }}>
+          Published work in dental AI and 3D vision, with contributions to
+          registered Korean patents and international PCT filings in automated
+          prosthesis generation, 3D scan alignment, and medical image
+          registration.
+        </p>
+
+        <p style={{ color: "#555", lineHeight: 1.7 }}>
+          Representative patent:{" "}
+          <a
+            href="https://doi.org/10.8080/1020240091252"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Automated method for aligning scan data
+          </a>
+          .
+        </p>
+
+        <ul style={{ lineHeight: 1.8, marginTop: 16 }}>
+          <li>
+            Choi, J., <strong>Ahn, J.</strong>, and Park, J.-M. Deep
+            learning-based automated detection of the dental crown finish line:
+            An accuracy study, <em>Journal of Prosthetic Dentistry</em>, 2024{" "}
+            <a
+              href="https://doi.org/10.1016/j.prosdent.2023.11.018"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Article
+            </a>
+            {" · "}
+            <a href={`${publicUrl}/docs/publications/finish-line.bib`}>
+              BibTeX
+            </a>
+            {" · "}
+            <a href={`${publicUrl}/docs/publications/finish-line.pdf`}>PDF</a>
+          </li>
+
+          <li>
+            Cho, J. H., Yi, Y., Choi, J., <strong>Ahn, J.</strong>, Yoon, H. I.,
+            and Yilmaz, B. GAN-based dental design optimization,{" "}
+            <em>Journal of Dentistry</em>, 2023{" "}
+            <a
+              href="https://doi.org/10.1016/j.jdent.2023.104739"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Article
+            </a>
+            {" · "}
+            <a href={`${publicUrl}/docs/publications/gan-dental-design.bib`}>
+              BibTeX
+            </a>
+            {" · "}
+            <a href={`${publicUrl}/docs/publications/gan-dental-design.pdf`}>
+              PDF
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section style={{ marginTop: 72 }}>
+        <h2>Service</h2>
+
+        <p style={{ color: "#555", lineHeight: 1.7, marginTop: 16 }}>
+          Full-time missionary service with The Church of Jesus Christ of
+          Latter-day Saints, focused on communication, mentoring, community
+          service, and cross-cultural collaboration.
+        </p>
       </section>
     </main>
   );
