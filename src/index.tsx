@@ -1,24 +1,35 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './index.css';
-import App from './App';
-import { MaritimeAutonomousNavigation } from './project';
-import reportWebVitals from './reportWebVitals';
- 
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./index.css";
+import App from "./App";
+import {
+  AIDeploymentOptimization,
+  MaritimeAutonomousNavigation,
+  Registration3D,
+} from "./project";
+import reportWebVitals from "./reportWebVitals";
+
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement,
 );
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/MaritimeAutonomousNavigation" element={<MaritimeAutonomousNavigation />} />
+        <Route
+          path="/MaritimeAutonomousNavigation"
+          element={<MaritimeAutonomousNavigation />}
+        />
+        <Route path="/Registration3D" element={<Registration3D />} />
+        <Route
+          path="/AIDeploymentOptimization"
+          element={<AIDeploymentOptimization />}
+        />
       </Routes>
     </BrowserRouter>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
- 
+
 reportWebVitals();
- 
